@@ -3,7 +3,11 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
-    const data = await prisma.todo.findMany();
+    const data = await prisma.todo.findMany({
+      orderBy: {
+        createdAt: "asc",
+      },
+    });
     return NextResponse.json(data);
   } catch (error) {
     return new NextResponse("Error has occured while fetching the categories", {

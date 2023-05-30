@@ -32,12 +32,12 @@ export default function AddForm() {
         <Input
           type="text"
           value={inputValue}
-          placeholder="Add To do"
+          placeholder="Add Todo"
           onChange={handleChange}
         />
         <button
           disabled={loading}
-          className="my-5 p-3 bg-cyan-700 rounded-lg disabled:opacity-20 hover:bg-cyan-600"
+          className="my-5 p-3 bg-cyan-700 rounded-lg disabled:opacity-20 hover:bg-cyan-600 outline-none focus:ring focus:ring-pink-400"
           type="submit"
         >
           Add Todo
